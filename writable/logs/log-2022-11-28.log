@@ -1,0 +1,271 @@
+ERROR - 2022-11-28 00:03:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '), `nama_artis` = NULL, `nama_album` = NULL, `ver_album` = NULL, `harga` = '3...' at line 1 in C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_albu...', 0)
+#1 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_albu...')
+#2 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_albu...')
+#3 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_albu...', Array, false)
+#4 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Models\Album.php(29): CodeIgniter\Model->update('1', Array)
+#8 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Controllers\Album.php(55): App\Models\Album->updateAlbum('1', Array)
+#9 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(927): App\Controllers\Album->update('1')
+#10 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+#11 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-28 00:03:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '), `nama_artis` = NULL, `nama_album` = NULL, `ver_album` = NULL, `harga` = '3...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_album` SET `img` = (), `nama_artis` = NULL, `nama_album` = NULL, `ver_album` = NULL, `harga` = \'300000\', `stok` = \'10\'
+WHERE `tb_album`.`id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_album` SET `img` = (), `nama_artis` = NULL, `nama_album` = NULL, `ver_album` = NULL, `harga` = \'300000\', `stok` = \'10\'
+WHERE `tb_album`.`id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_album` SET `img` = (), `nama_artis` = NULL, `nama_album` = NULL, `ver_album` = NULL, `harga` = \'300000\', `stok` = \'10\'
+WHERE `tb_album`.`id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_album` SET `img` = :img:, `nama_artis` = :nama_artis:, `nama_album` = :nama_album:, `ver_album` = :ver_album:, `harga` = :harga:, `stok` = :stok:
+WHERE `tb_album`.`id` IN :tb_album.id:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Models\Album.php(29): CodeIgniter\Model->update('1', [...])
+ 9 APPPATH\Controllers\Album.php(55): App\Models\Album->updateAlbum('1', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Album->update('1')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 00:03:51 --> mysqli_sql_exception: Column 'img' cannot be null in C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Models\Album.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Controllers\Album.php(33): App\Models\Album->saveAlbum(Array)
+#9 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(927): App\Controllers\Album->save()
+#10 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+#11 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-28 00:03:51 --> Column 'img' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_album` (`img`, `nama_artis`, `nama_album`, `ver_album`, `harga`, `stok`) VALUES (NULL, \'Lala\', \'tes\', \'tes\', \'200000\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_album` (`img`, `nama_artis`, `nama_album`, `ver_album`, `harga`, `stok`) VALUES (NULL, \'Lala\', \'tes\', \'tes\', \'200000\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_album` (`img`, `nama_artis`, `nama_album`, `ver_album`, `harga`, `stok`) VALUES (NULL, \'Lala\', \'tes\', \'tes\', \'200000\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_album` (`img`, `nama_artis`, `nama_album`, `ver_album`, `harga`, `stok`) VALUES (:img:, :nama_artis:, :nama_album:, :ver_album:, :harga:, :stok:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\Album.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Album.php(33): App\Models\Album->saveAlbum([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Album->save()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-28 00:08:16 --> Undefined array key "img"
+in APPPATH\Views\Album.php on line 43.
+ 1 APPPATH\Views\Album.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "img"', 'APPPATH\\Views\\Album.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Album.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Album', [], true)
+ 5 APPPATH\Controllers\Album.php(16): view('Album', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Album->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 01:16:56 --> mysqli_sql_exception: Table 'dbprak7.users' doesn't exist in C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('sarah@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sarah@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Controllers\Auth.php(57): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(927): App\Controllers\Auth->register()
+#10 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-28 01:16:56 --> Table 'dbprak7.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `users`
+WHERE `email` = \'sarah@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `email` = \'sarah@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `email` = \'sarah@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('sarah@gmail.com', 'email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sarah@gmail.com', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Auth.php(57): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->register()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 01:18:55 --> mysqli_sql_exception: Table 'dbprak7.users' doesn't exist in C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('sarah@gmail.com', 'email', Array, NULL, 'email')
+#6 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sarah@gmail.com', Array, Array)
+#7 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Controllers\Auth.php(57): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(927): App\Controllers\Auth->register()
+#10 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-28 01:18:55 --> Table 'dbprak7.users' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `users`
+WHERE `email` = \'sarah@gmail.com\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `users`
+WHERE `email` = \'sarah@gmail.com\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `users`
+WHERE `email` = \'sarah@gmail.com\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('sarah@gmail.com', 'email', [...], null, 'email')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'sarah@gmail.com', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Auth.php(57): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Auth->register()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 02:16:45 --> mysqli_sql_exception: Column 'nama_artis' cannot be null in C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Models\Album.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Controllers\Album.php(32): App\Models\Album->saveAlbum(Array)
+#9 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(927): App\Controllers\Album->save()
+#10 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+#11 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-28 02:16:45 --> Column 'nama_artis' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (:nama_artis:, :nama_album:, :ver_album:, :lagu:, :tahun:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\Album.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Album.php(32): App\Models\Album->saveAlbum([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Album->save()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 04:17:05 --> mysqli_sql_exception: Column 'nama_artis' cannot be null in C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Models\Album.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Controllers\Album.php(32): App\Models\Album->saveAlbum(Array)
+#9 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(927): App\Controllers\Album->save()
+#10 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+#11 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-28 04:17:05 --> Column 'nama_artis' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (:nama_artis:, :nama_album:, :ver_album:, :lagu:, :tahun:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\Album.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Album.php(32): App\Models\Album->saveAlbum([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Album->save()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-11-28 04:17:18 --> mysqli_sql_exception: Column 'nama_artis' cannot be null in C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Models\Album.php(25): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\app\Controllers\Album.php(32): App\Models\Album->saveAlbum(Array)
+#9 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(927): App\Controllers\Album->save()
+#10 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+#11 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\tugas-pemweb-07-sarahairunnisa\prakpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-11-28 04:17:18 --> Column 'nama_artis' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb_album` (`nama_artis`, `nama_album`, `ver_album`, `lagu`, `tahun`) VALUES (:nama_artis:, :nama_album:, :ver_album:, :lagu:, :tahun:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\Album.php(25): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\Album.php(32): App\Models\Album->saveAlbum([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Album->save()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Album))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

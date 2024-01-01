@@ -1,0 +1,37 @@
+ERROR - 2022-12-16 10:04:22 --> mysqli_sql_exception: Duplicate entry '140810210017' for key 'PRIMARY' in C:\xampp\htdocs\prakkpemweb-7\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\prakkpemweb-7\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_iden...', 0)
+#1 C:\xampp\htdocs\prakkpemweb-7\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_iden...')
+#2 C:\xampp\htdocs\prakkpemweb-7\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_iden...')
+#3 C:\xampp\htdocs\prakkpemweb-7\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_iden...', Array, false)
+#4 C:\xampp\htdocs\prakkpemweb-7\system\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\prakkpemweb-7\system\BaseModel.php(886): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\prakkpemweb-7\system\Model.php(693): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\prakkpemweb-7\app\Models\Panitia.php(29): CodeIgniter\Model->update('140810210005', Array)
+#8 C:\xampp\htdocs\prakkpemweb-7\app\Controllers\Panitia.php(55): App\Models\Panitia->updatePanitia('140810210005', Array)
+#9 C:\xampp\htdocs\prakkpemweb-7\system\CodeIgniter.php(927): App\Controllers\Panitia->update('140810210005')
+#10 C:\xampp\htdocs\prakkpemweb-7\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panitia))
+#11 C:\xampp\htdocs\prakkpemweb-7\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\prakkpemweb-7\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\prakkpemweb-7\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-12-16 10:04:22 --> Duplicate entry '140810210017' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `tb_identitas` SET `npm` = \'140810210017\', `nama` = \'Aliya Rahmania\', `alamat` = \'Bandung\', `tgl_lhr` = \'08-08-2003\', `divisi` = \'Acara\', `jabatan` = \'Ketua Divisi\'
+WHERE `tb_identitas`.`npm` IN (\'140810210005\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tb_identitas` SET `npm` = \'140810210017\', `nama` = \'Aliya Rahmania\', `alamat` = \'Bandung\', `tgl_lhr` = \'08-08-2003\', `divisi` = \'Acara\', `jabatan` = \'Ketua Divisi\'
+WHERE `tb_identitas`.`npm` IN (\'140810210005\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tb_identitas` SET `npm` = \'140810210017\', `nama` = \'Aliya Rahmania\', `alamat` = \'Bandung\', `tgl_lhr` = \'08-08-2003\', `divisi` = \'Acara\', `jabatan` = \'Ketua Divisi\'
+WHERE `tb_identitas`.`npm` IN (\'140810210005\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `tb_identitas` SET `npm` = :npm:, `nama` = :nama:, `alamat` = :alamat:, `tgl_lhr` = :tgl_lhr:, `divisi` = :divisi:, `jabatan` = :jabatan:
+WHERE `tb_identitas`.`npm` IN :tb_identitas.npm:', [...], false)
+ 5 SYSTEMPATH\Model.php(338): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(886): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(693): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Models\Panitia.php(29): CodeIgniter\Model->update('140810210005', [...])
+ 9 APPPATH\Controllers\Panitia.php(55): App\Models\Panitia->updatePanitia('140810210005', [...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Panitia->update('140810210005')
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panitia))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
